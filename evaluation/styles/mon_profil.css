@@ -1,0 +1,302 @@
+*{
+    font-family: 'Segoe UI Regular';
+  }
+  
+  
+  body{
+      width: 100%;
+      height: 100%;
+  }
+  /*partie header  et titre */
+  header{
+      background-color:  rgb(54, 53, 53);
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 80px;
+  }
+  
+  .navigation{
+      padding: 0.4em;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+  }
+  
+  .mon_cv1{
+      width: 90em;
+      color: white;
+  }
+  
+  .mon_cv2{
+      
+      width: 90em;
+      color: white;
+      height: 100px;
+  }
+  
+  li{
+    list-style-type: none;
+  }
+  
+  
+  /*hamburger */
+  /* hamburger */
+  .checkbox {
+    display: none;
+  }
+  
+  .button {
+    position: relative;
+    background-color: rgb(100, 98, 98);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 2vh; 
+    right: 2vw;  
+    z-index: 2000;
+    box-shadow: 0 0rem 7rem black;
+    text-align: center; 
+    cursor: pointer;
+  }
+  
+  .background {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 2.5vh; 
+    right: 2.5vw; 
+    background-image: radial-gradient(rgb(88, 67, 128), rgb(231, 217, 217));
+    z-index: 1000;
+  
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  .nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -60vw;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s;
+  }
+  
+  .list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .item {
+    margin: 1rem;
+    font-size: 36px;
+  }
+  
+  .link:link,
+  .link:visited {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      white 50%
+    );
+    background-size: 220%;
+    transition: all 0.4s;
+  }
+  
+  .link:hover,
+  .link:active {
+    color: lightgreen;
+    cursor: pointer;
+  }
+  
+  /* functionality */
+  .checkbox:checked ~ .background {
+    transform: scale(80);
+  }
+  .checkbox:checked ~ .nav {
+    opacity: 1;
+    width: 100%;
+    right: 0;
+  }
+  
+  /*  */
+  /* styling hamb ICON */
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .icon,
+  .icon::before,
+  .icon::after {
+    width: 1.5rem;
+    height: 2px;
+    background-color: rgb(3, 3, 3);
+    display: inline-block;
+  }
+  
+  .icon::before,
+  .icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+  
+  .icon::before {
+    top: -0.8rem;
+  }
+  .icon::after {
+    top: 0.8rem;
+  }
+  
+  .button:hover icon:before {
+    top: -1rem;
+  }
+  .button:hover icon::after {
+    top: 1rem;
+  }
+  
+  .checkbox:checked + .button .icon {
+    background-color: transparent;
+  }
+  
+  .checkbox:checked + .button .icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  .checkbox:checked + .button .icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  
+  
+  /*///////////////////////////////////////////////////*/
+  
+  
+  
+  
+  /*partie*/ 
+  
+  /*main formulaire*/
+  
+  main{
+    padding-left: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 901px;
+  }
+  
+  .input_label{
+      margin-top: 40px;
+  }
+  
+  .titre{
+      margin-left: 40em;
+  }
+  
+  .form{
+      margin-left: 7em;
+      width: 500px;
+  
+  }
+  .champs-obligatoire{
+      margin-left: 7em;
+  }
+  .formulaire{
+      width: 80%;
+      height: 100%;
+      border-right: solid black 1px;
+  
+  }
+  .haut{
+      display: block;
+      width: 250px;
+      height: 20px;
+      float: left;
+  }
+
+  #lvl{
+    margin-left: 190px;
+  }
+  
+ 
+  
+  
+  /*contact liens et categories */
+  
+  .liens_categories{
+      width: 19%;
+  }
+  
+  .liens{
+      margin-top: 1.4em;
+      margin-left: 1.4em;
+      width: 240px;
+      border: solid black;
+      border-radius: 30px;
+      height: fit-content;
+      padding: 20px;
+  }
+  
+  .categories{
+      margin-top: 1.4em;
+      margin-left: 1.4em;
+      width: 240px;
+      border: solid black;
+      border-radius: 30px;
+      height: fit-content;
+      padding: 20px;
+  }
+  
+  .liste{
+    margin-right: 50px;
+      margin-bottom: 40px;
+      border-bottom:2px solid red;
+      list-style: none;
+  }
+  
+  .submit_reset{
+      margin-top: 40px;
+      width: 200px;
+  }
+  /*footer*/
+  footer{
+      width: 100%;
+      height: 100px;
+      background-color:  rgb(54, 53, 53);
+      align-items: center;
+  }
+  span{
+      color: rgb(255, 0, 0);
+  }
+  
+  h2{
+    font-family: 'Segoe UI Bold Italic';
+    font-size:29px;
+  }
+  
+  h1{
+    font-family: 'Segoe UI Bold';
+    font-size:39px;
+  }
